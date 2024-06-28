@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="gb2312" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="Keywords" content="上古世纪,archeage,第三代网游,QQ,腾讯游戏,腾讯,2011,网游" />
+	<meta name="Description" content="上古世纪由'韩国网游第一人'宋在京领衔开发腾讯代理运营，全球首款第三代网游，以其划时代的创新游戏理念、宏大的游戏世界和高清细腻的表现力，被公认最有希望改变与创造网游历史的游戏。" />
+	<title>上古世纪-AGE-官方网站-腾讯游戏-第三代网游，这一次改变世界</title>
+	<link rel="stylesheet" type="text/css" href="css/preview.css" />
+	
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/archeage.js"></script>
+<!--	<script type="text/javascript" src="js/preview_sns.js"></script>-->
+<!--	<script type="text/javascript" src="js/preview_service.js"></script>-->
+	<script type="text/javascript">
+		var isCompleted = false;
+		var slideDetailOption = {
+			
+			 'trailer' : { title : 'ArcheAge',wikiUrl : '', hasMovie: 'true'}
+			, 'ship-warfare' : { title : '',wikiUrl : '', hasMovie: 'true'}
+			, 'ship-kraken' : { title : '',wikiUrl : '', hasMovie: 'true'}
+			, 'glider-video' : { title : '',wikiUrl : '', hasMovie: 'true'}
+			, 'pvp-duel' : { title : '',wikiUrl : '', hasMovie: 'true'}
+			, 'pvp-warfare' : { title : '',wikiUrl : '', hasMovie: 'true'}
+			, 'siege-video' : { title : '',wikiUrl : '', hasMovie: 'true'}
+		};
+		var preview;
+	</script>
+	<script data-main="./js/main" src="js/rj.js"></script>
+</head>
+
+<body>
+<div id="preloader">
+	<div class="logo"></div>
+	<div class="footer"></div>
+	<img src="/img/common/preloader.jpg" alt="" width="0" height="0" class="preloader-dummy">
+</div>
+<div id="viewport" style="display:none">
+	<div id="topbar">
+		<div class="wrap">
+			<h1 class="link-aa"><a href="index.html#index" target="_blank" title="To Main">ArcheAge</a></h1>
+			<div class="outlink">
+				<div id="bgmPlayer">
+					<div class="box">
+					<strong class="tit">BGM</strong>
+						<div class="wrap-btn">
+							<a href="javascript:;" class="prev">PREV</a>
+							<a href="javascript:;" class="toggle-play play">PLAY</a>
+							<a href="javascript:;" class="next">NEXT</a>
+						</div>
+					</div>
+					<div class="nowplaying">now playing..</div>
+				</div>
+				<span class="bar"></span>
+				<a href="https://age.qq.com/" target="_blank" class="link-contact">返回官网</a>
+				<!-- <a href="//game.qq.com/index.shtml" target="_blank" class="link-tencent">TENCENT</a>
+				<a href="//xlgames.com/en" target="_blank" class="link-xlgames">XLGAMES</a>
+				<a href="//www.crytek.com/" target="_blank" class="link-crytek">CRYTEK</a> -->
+			</div>
+		</div>
+	</div>
+	<div class="menu" data-id="trailer">
+		<a href="index.html#index" class="link-top">TOP</a>
+	</div>
+	<div id="scrollPanel">
+
+		<div id="currentUtil" class="current util"></div>
+		<div id="currentSlide" class="current slide"></div>
+		<div id="helperUtil" class="helper util"></div>
+		<div id="helperSlide" class="helper slide"></div>
+	</div>
+</div>
+<div id="musicPlayer"></div>
+
+<div id="tempSlide">
+	
+	<div class="index slide" data-id="index">
+		<div class="content">
+			<a href="index.html#world" class="section">
+				世界观
+				<i class="btn-world back"></i>
+				<i class="btn-world front"></i>
+			</a>
+			<a href="index.html#race-nuian" class="section">
+				种族
+				<i class="btn-race back"></i>
+				<i class="btn-race front"></i>
+			</a>
+			<a href="index.html#classes" class="section">
+				120职业
+					<i class="btn-classes back"></i>
+					<i class="btn-classes front"></i>
+			</a>
+			<a href="index.html#zone" class="section">
+				地图
+				<i class="btn-zone back"></i>
+				<i class="btn-zone front"></i>
+			</a>
+			<a href="index.html#ship-main" class="section">
+				船舶
+				<i class="btn-ship back"></i>
+				<i class="btn-ship front"></i>
+			</a>
+			<a href="index.html#trade-main" class="section">
+				贸易
+				<i class="btn-trade back"></i>
+				<i class="btn-trade front"></i>
+			</a>
+			<a href="index.html#glider-main" class="section">
+				滑翔翼
+				<i class="btn-glider back"></i>
+				<i class="btn-glider front"></i>
+			</a>
+			<a href="index.html#pvp-main" class="section">
+				PvP
+				<i class="btn-pvp back"></i>
+				<i class="btn-pvp front"></i>
+			</a>
+			<a href="index.html#life-house" class="section">
+				住宅和农场
+				<i class="btn-life back"></i>
+				<i class="btn-life front"></i>
+			</a>
+			<a href="index.html#siege-main" class="section">
+				攻城战
+				<i class="btn-siege back"></i>
+				<i class="btn-siege front"></i>
+			</a>
+		</div>
+		<div class="bg"></div>
+	</div>
+	<div class="world slide main" data-id="world">
+		<img src="/img/world/bg.jpg" alt="" class="bg-flexible" />
+		<div class="content"></div>
+		<div class="heros"></div>
+	</div>
+	<div class="race slide main" data-id="race">
+		<img src="/img/race/n-bg.jpg" alt="" class="bg-flexible race-bg-new race-bg-n" />
+		<img src="/img/race/e-bg.jpg" alt="" class="bg-flexible race-bg-new race-bg-e" />
+		<img src="/img/race/h-bg.jpg" alt="" class="bg-flexible race-bg-new race-bg-h" />
+		<img src="/img/race/f-bg.jpg" alt="" class="bg-flexible race-bg-new race-bg-f" />
+	</div>
+	<div class="race-nuian slide sub" data-id="race-nuian">
+		<div class="content">
+			<div class="txt"></div>
+		</div>
+		<div class="male"></div>
+		<div class="female"></div>
+	</div>
+	<div class="race-elf slide sub" data-id="race-elf">
+		<div class="content">
+			<div class="txt"></div>
+		</div>
+		<div class="male"></div>
+		<div class="female"></div>
+	</div>
+	<div class="race-hariharan slide sub" data-id="race-hariharan">
+		<div class="content">
+			<div class="txt"></div>
+		</div>
+		<div class="male"></div>
+		<div class="female"></div>
+	</div>
+	<div class="race-ferre slide sub" data-id="race-ferre">
+		<div class="content">
+			<div class="txt"></div>
+		</div>
+		<div class="male"></div>
+		<div class="female"></div>
+	</div>
+	<div class="classes slide main" data-id="classes">
+		<img src="/img/classes/bg.jpg" alt="" class="bg-flexible" />
+		<div class="copy"></div>
+		<div class="char"></div>
+		<a href="https://age.qq.com/web201408/gameinfo/info_3_1.shtml" target="_blank" class="btn"></a>
+	</div>
+	<div class="zone slide main" data-id="zone">
+		<div class="zone-nav active">
+			<div class="inner">
+				<button type="button" class="selected">
+					<span class="label">世界地图</span>
+					<i class="arr"></i>
+				</button>
+				<ul class="list">
+					<li>
+						<button type="button" data-zone="0" class="active">
+							<i class="dot"></i> 世界地图
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="1">
+							<i class="dot"></i> 珊瑚海岸
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="2">
+							<i class="dot"></i> 燃烧之城
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="3">
+							<i class="dot"></i> 玛瑞诺普
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="4">
+							<i class="dot"></i> 黄金平原
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="5">
+							<i class="dot"></i> 白雪森林
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="6">
+							<i class="dot"></i> 摩哈特比
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="7">
+							<i class="dot"></i> 棋盘石林
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="8">
+							<i class="dot"></i> 彩虹田野
+						</button>
+					</li>
+					<li>
+						<button type="button" data-zone="9">
+							<i class="dot"></i> 琵琶港
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-bg"></div>
+		</div>
+		<div class="zone-panel">
+			<div class="pics">
+				<ul class="list" data-zone="1">
+					<li data-zone="0" class="item world">
+						<div class="content">
+							<div class="copy"></div>
+							<div class="mark">
+								<img src="/img/zone/mark/1.png" alt="" class="p1" data-zone="1" />
+								<img src="/img/zone/mark/2.png" alt="" class="p2" data-zone="2" />
+								<img src="/img/zone/mark/3.png" alt="" class="p3" data-zone="3" />
+								<img src="/img/zone/mark/4.png" alt="" class="p4" data-zone="4" />
+								<img src="/img/zone/mark/5.png" alt="" class="p5" data-zone="5" />
+								<img src="/img/zone/mark/6.png" alt="" class="p6" data-zone="6" />
+								<img src="/img/zone/mark/7.png" alt="" class="p7" data-zone="7" />
+								<img src="/img/zone/mark/8.png" alt="" class="p8" data-zone="8" />
+								<img src="/img/zone/mark/9.png" alt="" class="p9" data-zone="9" />
+							</div>
+						</div>
+					</li>
+					<li data-zone="1" class="item"><img src="/img/zone/area/1.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="2" class="item"><img src="/img/zone/area/2.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="3" class="item"><img src="/img/zone/area/3.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="4" class="item"><img src="/img/zone/area/4.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="5" class="item"><img src="/img/zone/area/5.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="6" class="item"><img src="/img/zone/area/6.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="7" class="item"><img src="/img/zone/area/7.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="8" class="item"><img src="/img/zone/area/8.jpg" class="zone-img" alt="" /></li>
+					<li data-zone="9" class="item"><img src="/img/zone/area/9.jpg" class="zone-img" alt="" /></li>
+				</ul>
+			</div>
+			<div class="btns">
+				<a href="javascript:;" class="prev" title="PREV">PREV</a>
+				<a href="javascript:;" class="next" title="NEXT">NEXT</a>
+			</div>
+		</div>
+	</div>
+	<div class="ship slide main" data-id="ship">
+		<img src="/img/ship/bg.jpg" alt="" class="bg-flexible" />
+	</div>
+	<div class="ship-main slide sub" data-id="ship-main">
+		<div class="copy"></div>
+	</div>
+	<div class="ship-warfare slide sub" data-id="ship-warfare">
+		<div class="content">
+			<img src="/img/ship/warfare.jpg" class="poster" alt="">
+		</div>
+		<!--<a href="javascript:;" class="btn-movieplay"></a>-->
+	</div>
+	<div class="ship-kraken slide sub" data-id="ship-kraken">
+		<div class="content">
+			<img src="/img/ship/kraken.jpg" class="poster" alt="">
+		</div>
+		<!--<a href="javascript:;" class="btn-movieplay"></a>-->
+	</div>
+	<div class="ship-boat slide sub" data-id="ship-boat">
+		<div class="content">
+			<div class="v-panel">
+				<div class="pics">
+					<ul class="list">
+						<li><img src="/img/ship/boat/1.jpg" alt="" /></li>
+						<li><img src="/img/ship/boat/2.jpg" alt="" /></li>
+						<li><img src="/img/ship/boat/3.jpg" alt="" /></li>
+						<li><img src="/img/ship/boat/4.jpg" alt="" /></li>
+					</ul>
+				</div>
+				<div class="btns">
+					<a href="javascript:;" class="b1 active">小木船漂流</a>
+					<a href="javascript:;" class="b2">小木船竞赛</a>
+					<a href="javascript:;" class="b3">小木船吉尼斯</a>
+					<a href="javascript:;" class="b4">爱之小木船</a>
+				</div>
+			</div>
+			<div class="side-copy"></div>
+			<div class="side-boat"></div>
+			<div class="side-picture"></div>
+		</div>
+	</div>
+	<div class="trade slide main" data-id="trade">
+		<img src="/img/trade/bg.jpg" alt="" class="bg-flexible" />
+	</div>
+	<div class="trade-main slide sub" data-id="trade-main">
+		<div class="copy"></div>
+		<div class="side"></div>
+	</div>
+	<div class="trade-transportation slide sub" data-id="trade-transportation">
+		<div class="content">
+			<div class="h-panel">
+				<div class="pics">
+					<ul class="list">
+						<li><img src="/img/trade/transportation/1.jpg" alt="" /></li>
+						<li><img src="/img/trade/transportation/2.jpg" alt="" /></li>
+						<li><img src="/img/trade/transportation/3.jpg" alt="" /></li>
+					</ul>
+				</div>
+				<div class="btns">
+					<a href="javascript:;" class="b1 active">Trade ship</a>
+					<a href="javascript:;" class="b2">Cart</a>
+					<a href="javascript:;" class="b3">Donkey</a>
+				</div>
+			</div>
+			<div class="side-copy"></div>
+		</div>
+	</div>
+	<div class="glider slide main" data-id="glider">
+		<img src="/img/glider/bg.jpg" alt="" class="bg-flexible" />
+	</div>
+	<div class="glider-main slide sub" data-id="glider-main">
+		<div class="copy"></div>
+		<div class="flying1"></div>
+		<div class="flying2"></div>
+	</div>
+	<div class="glider-video slide sub" data-id="glider-video">
+		<div class="content">
+			<img src="/img/glider/movie.jpg" class="poster" alt="">
+		</div>
+		<!--<a href="javascript:;" class="btn-movieplay"></a>-->
+	</div>
+	<div class="glider-play slide sub" data-id="glider-play">
+		<div class="content">
+			<div class="v-panel">
+				<div class="pics">
+					<ul class="list">
+						<li><img src="/img/glider/play/1.jpg" alt="" /></li>
+						<li><img src="/img/glider/play/2.jpg" alt="" /></li>
+						<li><img src="/img/glider/play/3.jpg" alt="" /></li>
+					</ul>
+				</div>
+				<div class="btns">
+					<a href="javascript:;" class="b1 active">飞行比赛</a>
+					<a href="javascript:;" class="b2">空中表演</a>
+					<a href="javascript:;" class="b3">滑翔翼登山</a>
+				</div>
+			</div>
+			<div class="side-copy"></div>
+			<div class="side-aircraft"></div>
+		</div>
+	</div>
+<!--	<div class="court slide main" data-id="court">-->
+<!--		<img src="/img/court/bg.jpg" alt="" class="bg-flexible" />-->
+<!--	</div>-->
+<!--	<div class="court-main slide sub" data-id="court-main">-->
+<!--		<div class="criminal"></div>-->
+<!--		<div class="copy"></div>-->
+<!--	</div>-->
+<!--	<div class="court-prison slide sub" data-id="court-prison">-->
+<!--		<div class="content">-->
+<!--			<div class="v-panel">-->
+<!--				<div class="pics">-->
+<!--					<ul class="list">-->
+<!--						<li><img src="/img/court/prison/1.jpg" alt="" /></li>-->
+<!--						<li><img src="/img/court/prison/2.jpg" alt="" /></li>-->
+<!--						<li><img src="/img/court/prison/3.jpg" alt="" /></li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--				<div class="btns">-->
+<!--					<a href="javascript:;" class="b1 active">Prisoner Labor Points</a>-->
+<!--					<a href="javascript:;" class="b2">Soccer Competition</a>-->
+<!--					<a href="javascript:;" class="b3">Prison Break</a>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="side-copy"></div>-->
+<!--			<div class="side-criminal1"></div>-->
+<!--			<div class="side-criminal2"></div>-->
+<!--		</div>-->
+<!--	</div>-->
+	<div class="pvp slide main" data-id="pvp">
+		<img src="/img/pvp/bg.jpg" alt="" class="bg-flexible" />
+	</div>
+	<div class="pvp-main slide sub" data-id="pvp-main">
+		<div class="copy"><div class="inner"></div></div>
+		<div class="man-left"></div>
+		<div class="man-right"></div>
+	</div>
+	<div class="pvp-duel slide sub" data-id="pvp-duel">
+		<div class="content">
+			<img src="/img/pvp/duel.jpg" class="poster" alt="">
+		</div>
+		<!--<a href="javascript:;" class="btn-movieplay"></a>-->
+	</div>
+	<div class="pvp-warfare slide sub" data-id="pvp-warfare">
+		<div class="content">
+			<img src="/img/pvp/warfare.jpg" class="poster" alt="">
+		</div>
+		<!--<a href="javascript:;" class="btn-movieplay"></a>-->
+	</div>
+	<div class="life slide main" data-id="life">
+		<img src="/img/life/bg.jpg" alt="" class="bg-flexible" />
+	</div>
+	<div class="life-house slide sub" data-id="life-house">
+		<div class="copy"></div>
+	</div>
+	<div class="life-collectible slide sub" data-id="life-collectible">
+		<div class="content">
+			<div class="h-panel">
+				<div class="pics">
+					<ul class="list">
+						<li><img src="/img/life/collectible/1.jpg" alt="" /></li>
+						<li><img src="/img/life/collectible/2.jpg" alt="" /></li>
+						<li><img src="/img/life/collectible/3.jpg" alt="" /></li>
+					</ul>
+				</div>
+				<div class="btns">
+					<a href="javascript:;" class="b1 active">Shining Craftworks</a>
+					<a href="javascript:;" class="b2">Firezone</a>
+					<a href="javascript:;" class="b3">Merchant's Giant Pack</a>
+				</div>
+			</div>
+			<div class="side-copy"></div>
+		</div>
+	</div>
+	<div class="siege slide main" data-id="siege">
+		<div class="bg-rumble" style="width:100%;height:100%"><img src="/img/siege/bg.jpg" alt="" class="bg-flexible" /></div>
+	</div>
+	<div class="siege-main slide sub" data-id="siege-main">
+		<div class="copy"></div>
+	</div>
+	<div class="siege-video slide sub" data-id="siege-video">
+		<div class="content">
+			<img src="/img/siege/movie.jpg" class="poster" alt="">
+		</div>
+		<!--<a href="javascript:;" class="btn-movieplay"></a>-->
+	</div>
+</div>
+
+<script type="text/x-handlebars-template" id="audio_tmpl">
+	<audio id="audioPlayer" preload="preload">
+		<source type="audio/mpeg" src="/bgm/01.mp3">
+	</audio>
+</script>
+<script type="text/x-handlebars-template" id="flash_tmpl">
+	<!--<object id="flashPlayer" width="1" height="1" type="application/x-shockwave-flash" data="./js/bgm/player_mp3_js.swf">
+		<param name="FlashVars" value="mp3=/images/age/act/a20140825special/bgm/01.mp3&amp;listener=preview.bgm._parent&amp;interval=500"></param>
+		<param name="movie" value="/resources-201408200951/js/preview_en/bgm/player_mp3_js.swf"></param>
+		<param name="AllowScriptAccess" value="always"></param>
+	</object>-->
+</script>
+<script id="tempNav" type="text/x-handlebars-template">
+	<div id="nav">
+		<div class="nav-box">
+			<ul>
+				{{#links}}
+				<li>
+					<a href="/%7B%7Blink%7D%7D" data-slide="{{slideNum}}"><i class="dot"></i>{{{title}}}</a>
+				</li>
+				{{/links}}
+			</ul>
+		</div>
+	</div>
+</script>
+<script id="tempSubnav" type="text/x-handlebars-template">
+	<div class="subnav">
+		<span class="wrap">
+			<i class="subnav-left"></i>
+			<i class="subnav-right"></i>
+			<span class="links">
+				{{#links}}
+				<a href="/%7B%7Blink%7D%7D" data-slide="{{slideNum}}">{{title}}</a>
+				{{/links}}
+			</span>
+		</span>
+		<div class="tooltip" style="display: none">
+			<span class="tt-wrap">
+				<i class="tt-left"></i>
+				<i class="tt-right"></i>
+				<i class="tt-tail"></i>
+				<span class="txt"></span>
+			</span>
+		</div>
+	</div>
+</script>
+<script type="text/javascript">
+//统计代码
+var setSite={   //设置网站属性
+    siteType:"a20140825special"   //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+    ,pageType:"index"  //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+    ,pageName:"首页"   //必填项:页面中文名
+    ,project:"other"   //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;原生官网base;微社区ingame;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤站skin;默认other;
+    ,osact:0          //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+}
+if(typeof(pgvMain) == 'function')
+pgvMain();
+//IE6
+if(navigator.userAgent.indexOf("MSIE 6.0")>0)
+{
+	var iebox=document.createElement('div');
+	iebox.className='uaIE';
+	iebox.innerHTML='<a href="javascript:closeIE()" style="display:block; float:right; line-height:42px; font-size:15px; font-weight:bold; margin:0 20px 0 20px; color:#ff4200">X</a><p style="display:block; float:right; line-height:42px; font-size:15px; font-weight:bold">您的浏览器使用的是<em style="color:#942600; font-weight:bold">版本过低的IE6内核</em>，为了保证您能顺畅浏览本站，请<a href="https://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank" style="text-decoration:underline">升级您本机的Internet Explorer</a>、或者使用firefox/chrome、或切换到其他内核：）</p>';
+	document.body.appendChild(iebox);
+	function closeIE(){iebox.style.display="none";}
+}
+
+</script>
+</body>
+</html><!--[if !IE]>|xGv00|9bbd533a6ed29f2ea5cd8e27665526ab<![endif]-->
